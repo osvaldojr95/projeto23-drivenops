@@ -2,10 +2,11 @@ FROM node:16
 
 WORKDIR /usr/src/
 
-COPY . .
+COPY /back-end /usr/src/
 
 EXPOSE 5000
 
 RUN npm i
+RUN npm run build
 
 CMD ["npm","run","start"]
